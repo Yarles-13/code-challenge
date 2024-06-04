@@ -1,5 +1,10 @@
 const findSum = function(array) {
-  // your code here - don't forget to return a number!
+  let sum = 0;
+
+  for (let i = 0; i < array.length; i++){
+    sum += array[i];
+  }
+  return sum 
 };
 
 const findFrequency = function(array) {
@@ -7,7 +12,18 @@ const findFrequency = function(array) {
 };
 
 const isPalindrome = function(str) {
-  // your code here - don't forget to return a boolean!
+  let left = 0;
+  let right = str.length - 1;
+
+  while (left < right){
+    if (str.charAt(left) != str.charAt(right)){
+      return false
+    }
+    left++;
+    right --;
+  }
+
+  return true
 };
 
 const largestPair = function(array) {
